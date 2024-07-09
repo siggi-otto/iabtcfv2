@@ -6,6 +6,7 @@ const (
 	SegmentTypeUndefined        SegmentType = -1
 	SegmentTypeCoreString       SegmentType = 0
 	SegmentTypeDisclosedVendors SegmentType = 1
+	SegmentTypeAllowedVendors   SegmentType = 2
 	SegmentTypePublisherTC      SegmentType = 3
 )
 
