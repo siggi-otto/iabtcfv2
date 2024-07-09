@@ -1,3 +1,3 @@
-module github.com/SirDataFR/iabtcfv2
+module github.com/siggi-otto/iabtcfv2
 
 go 1.17
