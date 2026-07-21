@@ -3,7 +3,7 @@ Go client library to read and encode IAB TCF v2.0 TC Strings.
 ### Installation
 
 ```
-go get github.com/siggi-otto/iabtcfv2
+go get github.com/OTTO-FKT-SIGGI/iabtcfv2
 ```
 
 The package defines a `TCData` structure with the three segments a TC String can contain:
@@ -56,7 +56,7 @@ package main
 
 import (
   "fmt"
-  "github.com/siggi-otto/iabtcfv2"
+  "github.com/OTTO-FKT-SIGGI/iabtcfv2"
 )
 
 func main() {
@@ -98,7 +98,7 @@ package main
 
 import (
   "fmt"
-  "github.com/siggi-otto/iabtcfv2"
+  "github.com/OTTO-FKT-SIGGI/iabtcfv2"
 )
 
 func main() {
@@ -173,7 +173,7 @@ package main
 
 import (
   "fmt"
-  "github.com/siggi-otto/iabtcfv2"
+  "github.com/OTTO-FKT-SIGGI/iabtcfv2"
 )
 
 func main() {
