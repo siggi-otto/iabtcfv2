@@ -222,16 +222,16 @@ func DecodeAllowedVendors(allowedVendors string) (a *AllowedVendors, err error) 
 		return nil, err
 	}
 
-	var e = newTCEncoder(b)
+	var e = NewTCEncoder(b)
 
 	a = &AllowedVendors{}
-	a.SegmentType = e.readInt(bitsSegmentType)
-	a.MaxVendorId = e.readInt(bitsMaxVendorId)
-	a.IsRangeEncoding = e.readBool()
+	a.SegmentType = e.ReadInt(bitsSegmentType)
+	a.MaxVendorId = e.ReadInt(bitsMaxVendorId)
+	a.IsRangeEncoding = e.ReadBool()
 	if a.IsRangeEncoding {
-		a.NumEntries, a.RangeEntries = e.readRangeEntries()
+		a.NumEntries, a.RangeEntries = e.ReadRangeEntries()
 	} else {
-		a.AllowedVendors = e.readBitField(uint(a.MaxVendorId))
+		a.AllowedVendors = e.ReadBitField(uint(a.MaxVendorId))
 	}
 
 	if a.SegmentType != int(SegmentTypeAllowedVendors) {
